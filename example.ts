@@ -33,7 +33,8 @@ type TrioseView<AppMsg, ComponentName, ModelData> =
         >
     >;
 
-type ModelName = [ "triose-model", string ];
+type TrioseHandler<AppMsg, ActualModel> =
+    (_: AppMsg) => (_: ActualModel) => ActualModel;
 
 // Types (Erasure)
 
